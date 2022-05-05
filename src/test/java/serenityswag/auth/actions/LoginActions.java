@@ -15,8 +15,14 @@ public class LoginActions extends UIInteractionSteps {
         //driver.findElement(By.cssSelector("[data-test='password']")).sendKeys("secret_sauce");
         //driver.findElement(By.cssSelector("[data-test='login-button']")).click();
 
-        find("[data-test='username']").sendKeys(user.getUserName());
-        $("[data-test='password']").sendKeys(user.getPassword());
-        $("[data-test='login-button']").click();
+        //Locate an object using css selector and find by id method
+        //find("[data-test='username']").sendKeys(user.getUserName());
+        //Using css selector instead
+        $("#user-name").sendKeys(user.getUserName());
+        //$("[data-test='password']").sendKeys(user.getPassword());
+        //Using css selector instead
+        $("#password").sendKeys(user.getPassword());
+        //$("[data-test='login-button']").click();
+        $("#login-button").click();
     }
 }
